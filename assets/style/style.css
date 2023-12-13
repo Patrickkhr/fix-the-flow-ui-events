@@ -79,3 +79,40 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+
+.clicked,
+.doubleClick,
+.keydown,
+.longPress[data-editing="true"],
+.deviceMotion {
+  background: var(--highlight-secondary);
+}
+
+.frontend::after {
+  content: "Frontend";
+}
+.frontend:hover::after {
+  content: "Click me!";
+}
+
+.design::after {
+content: "Design";
+}
+.design:hover::after {
+ content: "Double click me!";
+}
+
+.and::after {
+  content: "&";
+}
+.and:hover::after {
+  content: "Click me and press F!";
+}
+
+.longPress::after {
+  content: "Development";
+}
+.longPress:hover::after {
+  content: "Click and hold me for .5s";
+}
+
