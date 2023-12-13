@@ -84,8 +84,20 @@ a:nth-of-type(12) {
 .doubleClick,
 .keydown,
 .longPress[data-editing="true"],
-.deviceMotion {
+.deviceMotion,
+.mousemove,
+.focusFill {
   background: var(--highlight-secondary);
+}
+
+.bigText {
+  font-size: 6rem;
+}
+
+.colorSwitch {
+  background: var(--highlight-primary);
+  color: var(--secondary);
+  border: var(--line) solid var(--highlight-secondary);
 }
 
 .frontend::after {
@@ -116,3 +128,24 @@ content: "Design";
   content: "Click and hold me for .5s";
 }
 
+.mousemove:hover::before {
+  content: "Hover me to ";
+}
+
+.focusFill::after {
+  content: " Click to remove focus";
+}
+
+.user::after {
+  content: "User";
+}
+.user:hover::after {
+  content: "Click for big text!";
+}
+
+.interface::after {
+  content: "Interface";
+}
+.interface:hover::after {
+  content: "Click to switch colors!";
+}
